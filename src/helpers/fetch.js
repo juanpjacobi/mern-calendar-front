@@ -7,7 +7,6 @@ const fetchWithOutToken = ( endpoint, data, method = 'GET') => {
     } else {
         return fetch(url, {
             method,
-            mode: "no-cors",
             headers: {
                 'Content-type': 'application/json',
             },
@@ -21,7 +20,6 @@ const fetchWithToken = ( endpoint, data, method = 'GET') => {
     if (method === 'GET') {
         return fetch( url, {
             method,
-            mode: "no-cors",
             headers: {
                 'x-token': token
             }
