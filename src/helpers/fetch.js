@@ -22,7 +22,8 @@ const fetchWithToken = ( endpoint, data, method = 'GET') => {
         return fetch( url, {
             method,
             headers: {
-                'x-token': token
+                'x-token': token,
+                'Access-Control-Allow-Origin': '*',
             }
         } );
     } else {
