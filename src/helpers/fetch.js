@@ -9,7 +9,6 @@ const fetchWithOutToken = ( endpoint, data, method = 'GET') => {
             method,
             headers: {
                 'Content-type': 'application/json',
-                'Access-Control-Allow-Origin': '*',
             },
             body: JSON.stringify( data )
         })
@@ -22,8 +21,7 @@ const fetchWithToken = ( endpoint, data, method = 'GET') => {
         return fetch( url, {
             method,
             headers: {
-                'x-token': token,
-                'Access-Control-Allow-Origin': '*',
+                'x-token': token
             }
         } );
     } else {
